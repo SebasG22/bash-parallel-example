@@ -1,6 +1,8 @@
 steps:
   - name: ":console:"
-    command: "script.sh"
-    parallelism: 5
-    agents:
-      queue: $BUILDKITE_AGENT_META_DATA_QUEUE
+  - commands:
+    - "script.sh"
+    - "BuildkiteTerminateInstanceAfterJob=TRUE"
+   parallelism: 5 
+   agents:
+     queue: $BUILDKITE_AGENT_META_DATA_QUEUE
