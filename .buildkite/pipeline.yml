@@ -1,7 +1,7 @@
 steps: 
   - 
     commands: 
-      - "script.sh"
+      - "./script.sh"
       - "BuildkiteTerminateInstanceAfterJob=TRUE"
     parallelism: 5 
     agents:
